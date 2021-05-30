@@ -148,8 +148,14 @@
 
         }
         else{
-            let inputAmount = parseInt(inputValue)-1;
-            if(inputAmount >0)
+
+            let inputAmount = parseInt(inputValue);
+            if(inputAmount >=0)
+            {
+                inputAmount = parseInt(inputValue) -1 ;
+                
+            }
+            if(inputAmount >= 0)
             {
                 document.getElementById(id).value= inputAmount;
                 if(id == "firstClass")
@@ -175,14 +181,14 @@
             }
 
             }
-            else{
-                inputAmount = 0;
-                document.getElementById(id).value = '0';
-                subTotalAmount = 0;
-                document.getElementById("subTotal").innerText = subTotalAmount;
+            // else{
+            //     inputAmount = 0;
+            //     document.getElementById(id).value = '0';
+            //     subTotalAmount = 0;
+            //     document.getElementById("subTotal").innerText = subTotalAmount;
 
 
-            }
+            // }
             //document.getElementById(id).value= inputAmount;
             
 
